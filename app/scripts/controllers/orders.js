@@ -32,6 +32,7 @@ angular.module('mealsApp')
       $scope.del = true;
     };
 
+    // Displaying delivered food to delivery button
     $scope.changeDelivered = function(key, meals) {
       console.log(key);
 

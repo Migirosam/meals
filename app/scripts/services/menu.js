@@ -9,6 +9,8 @@
  */
 angular.module('mealsApp')
   .factory('menu', function () {
+    
+    // Creating an array of foods and restaurants in JSON format
 
     var myRestaurant = [
 
