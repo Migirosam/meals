@@ -1,0 +1,48 @@
+<!--<p>This is the about view.</p>-->
+<!--<li><a href="" ng-click="logout()">Log Out</a></li>-->
+
+<div class="jumbotron">
+  <h3>'Allo, 'Allo!</h3>
+  <p class="lead">
+    <img src="images/yeoman.png" alt="I'm Yeoman"><br>
+   Welcome to AMPATH Dev Meal System.
+  </p>
+  <p><a class="btn btn-lg btn-success" ng-href="#/">Splendid!<span class="glyphicon glyphicon-ok"></span></a></p>
+</div>
+
+<!--<label>Ordered Foods</label>-->
+<button class="w3-btn w3-ripple" ng-click="order()">Ordered Food</button>
+<button class="w3-btn w3-ripple" ng-click="deliver()">Delivered Foods</button>
+<table class="w3-table w3-striped w3-bordered w3-border" ng-show="!del">
+    <tr>
+        <th>Food</th>
+        <th>Price</th>
+        <!--<th>Restaurant</th>-->
+    </tr>
+    <tr ng-repeat="(key, meals) in orderedfood">
+        <!--<td>{{meals.foods.restname}}</td>-->
+        <td>{{meals.foodname}} </td>
+        <td>{{meals.price | currency}} </td>
+        <td><button class="w3-btn w3-ripple" ng-click="changeDelivered(key, meals)">&#4598; Delivered</button></td>
+    </tr>
+</table>
+
+<table class="w3-table w3-striped w3-bordered w3-border" ng-show="del">
+    
+    <tr>
+        <th>Food</th>
+        <th>Price</th>
+        <!--<th>Restaurant</th>-->
+    </tr>
+    <tr ng-repeat="meals in orderedfood" ng-show="meals.deliveredfood">
+        <!--<td>{{meals.foods.restname}}</td>-->
+        <td>{{meals.foodname}} </td>
+        <td>{{meals.price | currency}} </td>
+    </tr>
+</table>
+
+
+
+
+
+
