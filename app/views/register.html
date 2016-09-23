@@ -9,22 +9,37 @@
 
 <div class="row marketing">
   <form name="regForm"  ng-submit="register()" novalidate >
+    <div>
                <input type="firstname" name="firstname" class="form-control" placeholder="First Name" 
                 required="">
+
                 <p class="sign-up" ng-show="regForm.firstname.$invalid && 
                regForm.fisrtname.$touched">First Name required</p>
+    </div>
+    <div>
+
                <input type="lastname" name="lastname" class="form-control" placeholder="Last Name" 
                required="">
+
                <p class="sign-up" ng-show="regForm.lastname.$invalid && 
                regForm.lastname.$touched">Last Name required</p>
+    </div>
+    <div>
+
                <input type="email" name="email" class="form-control" placeholder="Email Address" 
                required="">
+
                <p class="sign-up" ng-show="regForm.email.$invalid && 
                regForm.email.$touched">Enter a valid Email</p>
+    </div>
+    <div>
+
                <input type="password" name="password" class="form-control" placeholder="Password" 
                required="">
+               
                <p class="sign-in" ng-show="regForm.password.$invalid && 
                regForm.password.$touched">Password is Required</p>
+    </div>
           
            <!--<label class="checkbox">-->
                <a ng-href="/#/home">Sign In<span class="glyphicon glyphicon-ok"></a>

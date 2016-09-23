@@ -15,13 +15,12 @@ angular.module('mealsApp')
       'Karma'
     ];
     // $scope.foods;
-
-    // $scope.me = "kljnhbfgvc";
     
     // reading data from localstorage
-    var orderedfood = JSON.parse($window.localStorage.getItem("orderedfoods"));
+    var orderedfood = JSON.parse($window.localStorage.getItem("orderedfoods"))||[];
     console.log(orderedfood);
-
+    // orderedfood = orderedfood || [];
+ 
     // Defining restaurant and ordered food
     $scope.myRestaurant = menu.myRestaurant;
     $scope.orderfood = function(key,Cafeteria){
@@ -44,6 +43,9 @@ angular.module('mealsApp')
         // Sending data to localstorage
         $window.localStorage.setItem("orderedfoods", JSON.stringify(orderedfood));
       };
+      /*$scope.order = function(){
+        //$window.alert("You selected" + foodname);
+      };*/
     
     };
     

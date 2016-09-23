@@ -15,14 +15,20 @@
     <h3>Select The Restaurant of your Choice</h3>
         <!--<form name="menuForm"-->
             <!--Displaying restnames in lists-->
-    <ul >
+<form>
+    <h2>Restaurants</h2>
+    <ul> <h3>
         <li ng-repeat="(key,Cafeteria) in myRestaurant">
             {{Cafeteria.restname}} 
+        <div>
         <button class="btn btn-lg btn-success" ng-submit="order" ng-click="orderfood(key,Cafeteria)">Check foods</button> 
+        </div>
         </li>
+        </h3>
     </ul>
-      
+</form>
 </div>
+<div>
  <table border="1" class="w3-table w3-striped w3-bordered w3-border">
      {{me}}
         <thead>
@@ -37,10 +43,41 @@
             <tr ng-repeat="food in foods">
                 <td>{{food.foodname}}</td>
                 <td>{{food.price | currency}}</td>
-                <td><button class="w3-btn w3-ripple" ng-click="storage(food)">&#4598; Order</button></td>
+                <td><button class="w3-btn w3-ripple" value="Show alert" ng-click="storage(food)">&#4598; Select</button></td>
             </tr>
         </tbody>
     </table>
-
+</div>
+<!--
+<div>
+<table class="w3-table w3-striped w3-bordered w3-border" ng-show="!del">
+    <tr>
+        <th>Food</th>
+        <th>Price</th>-->
+        <!--<th>Restaurant</th>-->
+    <!--</tr>
+    <tr ng-repeat="(key, meals) in orderedfood">-->
+        <!--<td>{{meals.foods.restname}}</td>-->
+        <!--<td>{{meals.foodname}} </td>
+        <td>{{meals.price | currency}} </td>
+        <td><button class="w3-btn w3-ripple" ng-click="changeDelivered(key, meals)">&#4598; Delivered</button></td>
+    </tr>
+</table>
+</div>-->
+    <!--<div>
+        <button class="w3-btn w3-ripple" ng-click="order()">Ordered Food</button>
+    </div>
+    <table class="w3-table w3-striped w3-bordered w3-border" ng-show="!del">
+    <tr>
+        <th>Food</th>
+        <th>Price</th>-->
+        <!--<th>Restaurant</th>-->
+   <!-- </tr>
+    <tr ng-repeat="(key, meals) in orderedfood">
+        <!--<td>{{meals.foods.restname}}</td>-->
+        <!--<td>{{meals.foodname}} </td>
+        <td>{{meals.price | currency}} </td>
+    </tr>
+    </table>-->
     <form>
     </form>
